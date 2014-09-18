@@ -1,0 +1,17 @@
+<%= form_for(@iqra_rastee) do |f| %>
+  <% if @iqra_rastee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@iqra_rastee.errors.count, "error") %> prohibited this iqra_rastee from being saved:</h2>
+
+      <ul>
+      <% @iqra_rastee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
